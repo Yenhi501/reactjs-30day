@@ -2,7 +2,10 @@ import React, { useEffect, useState } from "react";
 import TodoList from "./components/TodoList";
 import { useLocation } from "react-router-dom";
 import queryString from "query-string";
-
+import "@fontsource/roboto/300.css";
+import "@fontsource/roboto/400.css";
+import "@fontsource/roboto/500.css";
+import "@fontsource/roboto/700.css";
 TodoFeature.propTypes = {};
 
 function TodoFeature(props) {
