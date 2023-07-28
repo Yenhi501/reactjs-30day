@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import TodoList from "./components/TodoList";
+import { useLocation } from "react-router-dom";
+import queryString from "query-string";
 
 TodoFeature.propTypes = {};
 
@@ -22,8 +24,14 @@ function TodoFeature(props) {
     },
   ];
 
+  const location = useLocation();
   const [todoList, setTodoList] = useState(inittodoList);
-  const [filterStatus, setFilterStatus] = useState("all");
+  const [filterStatus, setFilterStatus] = useState(() => {
+    const params = queryString.parse(location.search);
+    console.log(params);
+
+    return params.status || "all";
+  });
 
   const handleTotolist = (todo, index) => {
     //clone curent array to the new one

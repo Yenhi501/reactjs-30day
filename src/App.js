@@ -128,7 +128,7 @@ function App() {
         </div>
 
         {/* <NavLink to="/todos">Todos</NavLink> */}
-        <Navigate from="/home" to="/" />
+        {/* <Navigate from="/home" to="/" /> */}
         <Routes>
           {/* <Route path="/" element={<TodoFeature />} /> */}
           <Route path="/todos" element={<TodoFeature />} />
