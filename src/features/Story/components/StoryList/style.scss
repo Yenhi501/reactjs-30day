@@ -1,0 +1,14 @@
+.contain{
+    display:  flex;
+    margin-left: 20px;
+
+    &__item{
+        list-style-type: none;
+        cursor: pointer;
+        transition: transform 0.7s;
+    }
+
+    &__item:hover{
+        transform: scale(1.05);
+    }
+}

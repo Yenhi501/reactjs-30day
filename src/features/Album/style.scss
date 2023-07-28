@@ -1,0 +1,14 @@
+.album-song {
+    border: 2px solid #ccc;
+    background-color: #170f23;
+    
+    &__title {
+            align-items:center;
+            color: #ffffff;
+            font-size:22px;
+            font-weight:700;
+            line-height:30px;
+            // margin:0px 0px 20px;
+            text-transform:capitalize;
+    }
+}

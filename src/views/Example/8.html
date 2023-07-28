@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Create Table Dynamically</title>
+  <style>
+    table {
+      border-collapse: collapse;
+    }
+    td {
+      border: 1px solid black;
+      padding: 8px;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    var data = [
+      ['Name', 'Age', 'City'],
+      ['John', '25', 'New York'],
+      ['Jane', '30', 'London'],
+      ['Bob', '35', 'Paris']
+    ];
+
+    var numRows = data.length;
+    var numCols = data[0].length;
+
+    var table = document.createElement('table');
+
+    for (var i = 0; i < numRows; i++) {
+      var row = document.createElement('tr');
+      for (var j = 0; j < numCols; j++) {
+        var cell = document.createElement('td');
+        cell.textContent = data[i][j];
+        row.appendChild(cell);
+      }
+      table.appendChild(row);
+    }
+
+    document.body.appendChild(table);
+  </script>
+</body>
+</html>

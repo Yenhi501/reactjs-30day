@@ -1,0 +1,60 @@
+.story-contain {
+
+    margin: 0 8px;
+    position: relative;
+
+    &__img {
+        border-radius: 1px;
+        width: 200px;
+        height: 280px;
+        object-fit: cover;
+
+    }
+
+    &__info {
+        position: absolute;
+        top: 56%;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 120px;
+        background: linear-gradient(to bottom, rgba(204, 204, 204, 0) 0%, rgba(0, 0, 0, 1) 100%);
+
+        &__name {
+            display: flex;
+            margin-left: 7px;
+            font-size: 18px;
+            font-weight: 700;
+            margin-top: 50px;
+        }
+
+        &__name:hover {
+            color: #0fb37d;
+        }
+
+        &__author {
+            display: flex;
+            font-size: 14px;
+            color: #d1d5db;
+            margin-top: -20px;
+            margin-left: 7px;
+            align-items: center;
+
+        }
+
+        &__dash {
+            border-bottom: 1px solid #8e8e8e;
+            margin-left: 6px;
+            width: 180px;
+            margin-top: -20px;
+        }
+
+        &__icon{
+            font-size: 18px;
+            margin-right: 4px;
+            color: #0fb37d;
+        }
+        
+    }
+}
+

@@ -1,0 +1,10 @@
+.todolist {
+    color : #881111;
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    & > li.completed {
+        color: #ccc;
+        text-decoration: line-through;
+    }
+}

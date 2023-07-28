@@ -1,0 +1,70 @@
+.album{
+    margin: 20px;
+
+    &__name {
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+    }
+
+    &__name:hover {
+        color: #9468d6;
+    }
+
+    &__container {
+        position: relative;
+        // display: inline-block;
+
+        &__img {
+            border-radius: 8px;
+            width: 205px;
+            height: 205px;
+            transition: transform .7s
+        }
+
+        &__img:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+        }
+    
+
+        &__icon {
+            position: absolute;
+            top: 40%;
+            left: 10%;
+            display: none;
+            cursor: pointer;
+        }
+
+    }
+
+    &__container:hover .album__container__icon{
+        display: block;
+    }
+
+    .album__icon__icon-sing-active{
+        font-size: 40px;
+    }
+
+
+    &__info {
+        font-size: 14px;
+        // display: inline;
+        overflow-wrap: break-word;
+        width: 205px;
+        color: hsla(0,0%,100%,0.5);
+        margin-top: -26px;
+    }
+
+    &__icon {
+        margin-right: 10px;
+        font-size: 15px;
+
+        &__icon-sing {
+            color: #b68df3;
+            margin: 0 14px;
+
+        }
+    }
+}
+

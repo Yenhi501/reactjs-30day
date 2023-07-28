@@ -1,0 +1,106 @@
+<!-- <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <style>
+      body {
+        background-color: #f2f2f2;
+        font-family: Arial, sans-serif;
+      }
+
+      .container {
+        width : 300px;
+        margin : 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: rgba(50,50,93,0.25) 0px 2px 5px -1px, rgba(0,0,0,0.3) 0px 1px 3px -1px;
+
+      }
+      h2 {
+        text-align : center;
+        margin-bottom: 20px;
+      }
+
+      label, input {
+        display : block;
+        margin-bottom: 10px;
+      }
+
+      input[type="text"],
+      input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px soild #ccc;
+        border-radius: 3px;
+      }
+      input[type="submit"] {
+        width : 100%;
+        padding : 12px;
+        background-color: #0D6EFD;
+        color : #fff;
+        border : none;
+        border-radius: 3px;
+        cursor : pointer;
+        margin-top : 20px;
+      }
+      </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Login</h2>
+      <form action="/login" method="post">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" required >
+
+      <input type="submit" value="Login">
+      </form>
+    </div>
+  </body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Giao diện người dùng</title>
+    <style>
+     .grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-left: 30px;
+  grid-gap: 180px;
+}
+
+.grid-item {
+  display:  flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  padding: 20px;
+  text-align: center;
+  font-size: 20px;
+  border: 2px solid #000;
+  font-weight: 600;
+}
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item">A</div>
+        <div class="grid-item">B</div>
+        <div class="grid-item">C</div>
+        <div class="grid-item">D</div>
+        <div class="grid-item">E</div>
+        <div class="grid-item">F</div>
+        <div class="grid-item">G</div>
+        <div class="grid-item">H</div>
+        <div class="grid-item">I</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+.story-feature {
+    &__contain {
+    border: 5px solid #fff;
+    background-color:  #efefef;
+    }
+
+    &__title {
+        display: flex;
+        align-items: center;
+        color: #000;
+        margin-bottom: -36px;
+        display: flex;
+        margin-left: 60px;
+        font-weight: 700;
+        margin-top: 10px;
+    }
+
+    &__icon{
+        font-size: 30px;
+        color: #0fb37d;
+        margin-right: 10px;
+    }
+}
