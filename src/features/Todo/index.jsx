@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import TodoList from "./components/TodoList";
 import { useLocation } from "react-router-dom";
 import queryString from "query-string";
@@ -24,14 +24,23 @@ function TodoFeature(props) {
     },
   ];
 
+  // const history = useHistory();
+  // const match = useRouteMatch();
   const location = useLocation();
   const [todoList, setTodoList] = useState(inittodoList);
   const [filterStatus, setFilterStatus] = useState(() => {
     const params = queryString.parse(location.search);
-    console.log(params);
+    // console.log(params);
 
     return params.status || "all";
   });
+
+  useEffect(() => {
+    const params = queryString.parse(location.search);
+    // console.log(params);
+
+    setFilterStatus(params.status || "all");
+  }, [location.search]);
 
   const handleTotolist = (todo, index) => {
     //clone curent array to the new one
@@ -54,14 +63,29 @@ function TodoFeature(props) {
 
   const handleShowAllClick = () => {
     setFilterStatus("all");
+    // const queyryParams = { status: "all" };
+    // history.push({
+    //   pathname: match.path,
+    //   search: queryString.stringify(queyryParams),
+    // });
   };
 
   const handleShowCompletedClick = () => {
     setFilterStatus("completed");
+    // const queyryParams = { status: "completed" };
+    // history.push({
+    //   pathname: match.path,
+    //   search: queryString.stringify(queyryParams),
+    // });
   };
 
   const handleShowNewClick = () => {
     setFilterStatus("new");
+    // const queyryParams = { status: "new" };
+    // history.push({
+    //   pathname: match.path,
+    //   search: queryString.stringify(queyryParams),
+    // });
   };
   const renderedTodoList = todoList.filter(
     (todo) => filterStatus === "all" || filterStatus === todo.status
