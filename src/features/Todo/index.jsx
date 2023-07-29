@@ -2,10 +2,13 @@ import React, { useEffect, useState } from "react";
 import TodoList from "./components/TodoList";
 import { useLocation } from "react-router-dom";
 import queryString from "query-string";
-import "@fontsource/roboto/300.css";
-import "@fontsource/roboto/400.css";
-import "@fontsource/roboto/500.css";
-import "@fontsource/roboto/700.css";
+// import "@fontsource/roboto/300.css";
+// import "@fontsource/roboto/400.css";
+// import "@fontsource/roboto/500.css";
+// import "@fontsource/roboto/700.css";
+// Supports weights 100-900
+import "@fontsource/noto-sans-jp";
+import "./style.scss";
 TodoFeature.propTypes = {};
 
 function TodoFeature(props) {
@@ -94,7 +97,7 @@ function TodoFeature(props) {
     (todo) => filterStatus === "all" || filterStatus === todo.status
   );
   return (
-    <div>
+    <div className="container">
       <h3>Todo List</h3>
       <TodoList todoList={renderedTodoList} onTodoClick={handleTotolist} />
 
