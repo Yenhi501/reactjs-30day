@@ -12,3 +12,317 @@
     <p>This is a paragraph.</p>
 </body>
 </html>
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Giao diện người dùng</title>
+    <style>
+     .grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-left: 30px;
+  grid-gap: 180px;
+}
+
+.grid-item {
+  display:  flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  padding: 20px;
+  text-align: center;
+  font-size: 20px;
+  border: 2px solid #000;
+  font-weight: 600;
+}
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item">A</div>
+        <div class="grid-item">B</div>
+        <div class="grid-item">C</div>
+        <div class="grid-item">D</div>
+        <div class="grid-item">E</div>
+        <div class="grid-item">F</div>
+        <div class="grid-item">G</div>
+        <div class="grid-item">H</div>
+        <div class="grid-item">I</div>
+    </div>
+</body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A better place to learn computer science">
+    <title>Dropdown Menu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .dropbtn {
+            background-color: #04AA6D;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none; 
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .icon {
+            font-size: 14px;
+            margin-left: 4px;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #3e8e41;
+        }
+    </style>
+</head>
+<body style="background-color:white;">
+
+<h2>Hoverable Dropdown</h2>
+
+<div class="dropdown">
+    <span class="dropbtn">Menu <i class="icon fa-solid fa-chevron-down"></i></span>
+    <div class="dropdown-content">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+    </div>
+</div>
+
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Running JavaScript</title>
+</head>
+<body>
+  <h1>Running JavaScript</h1>
+  
+  <script>
+function createTable(data) {
+  var table = document.createElement("table")
+  table.classList.add("my-table");
+  var thead = document.createElement("thead")
+  var headerRow = document.createElement("tr")
+
+var headers = Object.keys(data[0]);
+headers.forEach(function (header) {
+  var th = document.createElement("th");
+  th.textContent = header;
+  headerRow.appendChild(th)
+});
+
+thead.appendChild(headerRow);
+table.appendChild(thead);
+
+var tbody = document.createElement("tbody")
+
+data.forEach(function (obj) {
+  var dataRow = document.createElement("tr");
+  headers.forEach(function(header) {
+    var td = document.createElement("td");
+    td.textContent = obj[header];
+    dataRow.appendChild(td);
+  });
+
+  tbody.appendChild(dataRow);
+});
+
+table.appendChild(tbody);
+document.body.appendChild(table)
+}
+    
+    var data = [
+      { name: "John Doe", age: 25, email: "john@example.com" },
+      { name: "Jane Smith", age: 30, email: "jane@example.com" },
+      { name: "Bob Johnson", age: 35, email: "bob@example.com" }
+    ];
+    
+    createTable(data);
+  </script>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A better place to learn computer science">
+  <title>Document</title>
+  <style>
+    /* CSS for highlighting the message */
+    .highlight {
+      animation-name: highlight-animation;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+    }
+
+    @keyframes highlight-animation {
+      0% {
+        background-color: yellow;
+        color: black;
+      }
+      50% {
+        background-color: orange;
+        color: white;
+      }
+      100% {
+        background-color: yellow;
+        color: black;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1 class="highlight">Welcome to our website!</h1>
+  <p>This website provides valuable resources for learning computer science.</p>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Create Table Dynamically</title>
+  <style>
+    table {
+      border-collapse: collapse;
+    }
+    td {
+      border: 1px solid black;
+      padding: 8px;
+    }
+  </style>
+</head>
+<body>
+  <script>
+    var data = [
+      ['Name', 'Age', 'City'],
+      ['John', '25', 'New York'],
+      ['Jane', '30', 'London'],
+      ['Bob', '35', 'Paris']
+    ];
+
+    var numRows = data.length;
+    var numCols = data[0].length;
+
+    var table = document.createElement('table');
+
+    for (var i = 0; i < numRows; i++) {
+      var row = document.createElement('tr');
+      for (var j = 0; j < numCols; j++) {
+        var cell = document.createElement('td');
+        cell.textContent = data[i][j];
+        row.appendChild(cell);
+      }
+      table.appendChild(row);
+    }
+
+    document.body.appendChild(table);
+  </script>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dropdown Menu</title>
+  <style>
+    .dropdown-menu {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-menu ul {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #f9f9f9;
+      padding: 0;
+      margin: 0;
+      list-style-type: none;
+      display: none;
+    }
+
+    .dropdown-menu ul li {
+      padding: 10px;
+    }
+
+    .dropdown-menu ul li a {
+      display: block;
+      text-decoration: none;
+      color: #333;
+    }
+
+    .dropdown:hover .dropdown-menu ul {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <nav class="dropdown-menu">
+    <ul>
+      <li><a href="#">Trang chủ</a></li>
+      <li class="dropdown">
+        <a href="#">Danh mục</a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Mục 1</a></li>
+          <li><a href="#">Mục 2</a></li>
+          <li><a href="#">Mục 3</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Liên hệ</a></li>
+    </ul>
+  </nav>
+</body>
+</html>

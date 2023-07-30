@@ -1,7 +1,6 @@
 import "./App.scss";
 import logo from "./logo.svg";
-
-import React from "react";
+import React, { useEffect } from "react";
 // eslint-disable-next-line
 import MyComponent from "./views/Example/myComponent";
 // eslint-disable-next-line
@@ -98,6 +97,7 @@ import { Route, Routes, Link, NavLink, Navigate } from "react-router-dom";
 import AlbumFeature from "./features/Album";
 import StoryFeature from "./features/Story";
 import TodoFeature from "./features/Todo";
+import productsApi from "./api/productApi";
 /**
  * 2 components : class component / function component ( function, arrow)
  */
@@ -108,6 +108,17 @@ import TodoFeature from "./features/Todo";
 //   render() {
 
 function App() {
+  useEffect(() => {
+    const fetchProducts = async () => {
+      const params = {
+        _limit: 10,
+      };
+      const productList = await productsApi.getAll(params);
+      console.log(productList);
+    };
+
+    fetchProducts();
+  }, []);
   return (
     <div className="App">
       <header className="App-header">
@@ -136,7 +147,6 @@ function App() {
           <Route path="/stories" element={<StoryFeature />} />
         </Routes>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
           <AppWelcome />
           <StoryFeature />
           <AlbumFeature />
