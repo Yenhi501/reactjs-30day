@@ -1,13 +1,14 @@
-import React, { useEffect, useState } from "react";
-import TodoList from "./components/TodoList";
-import { useLocation } from "react-router-dom";
 import queryString from "query-string";
+import React, { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
+import TodoList from "./components/TodoList";
 // import "@fontsource/roboto/300.css";
 // import "@fontsource/roboto/400.css";
 // import "@fontsource/roboto/500.css";
 // import "@fontsource/roboto/700.css";
 // Supports weights 100-900
 import "@fontsource/noto-sans-jp";
+import TodoForm from "./components/TodoForm";
 import "./style.scss";
 TodoFeature.propTypes = {};
 
@@ -96,8 +97,22 @@ function TodoFeature(props) {
   const renderedTodoList = todoList.filter(
     (todo) => filterStatus === "all" || filterStatus === todo.status
   );
+  const handleTodoFormSubmit = (values) => {
+    console.log("Form submit: ", values);
+
+    const newTodo = {
+      id: todoList.length + 1,
+      title: values.title,
+      status: "new",
+    };
+
+    const newTodoList = [...todoList, newTodo];
+    setTodoList(newTodoList);
+  };
   return (
     <div className="container">
+      <h3> What to do</h3>
+      <TodoForm onSubmit={handleTodoFormSubmit} />
       <h3>Todo List</h3>
       <TodoList todoList={renderedTodoList} onTodoClick={handleTotolist} />
 

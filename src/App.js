@@ -98,6 +98,16 @@ import AlbumFeature from "./features/Album";
 import StoryFeature from "./features/Story";
 import TodoFeature from "./features/Todo";
 import productsApi from "./api/productApi";
+// eslint-disable-next-line
+import { Video40 } from "./views/Example/Video40";
+// eslint-disable-next-line
+import { Video41 } from "./views/Example/Video41";
+// eslint-disable-next-line
+import { Video42 } from "./views/Example/Video42";
+// eslint-disable-next-line
+import Video43 from "./views/Example/Video43";
+// eslint-disable-next-line
+import Video44 from "./views/Example/Video44";
 /**
  * 2 components : class component / function component ( function, arrow)
  */
@@ -136,12 +146,34 @@ function App() {
           <Link className="menu-header__item" to="/stories">
             Story
           </Link>
+          <Link className="menu-header__item" to="/video40">
+            Video40
+          </Link>
+          <Link className="menu-header__item" to="/video41">
+            Video41
+          </Link>
+          <Link className="menu-header__item" to="/video42">
+            Video42
+          </Link>
+        </div>
+        <div className="menu-header">
+          <Link className="menu-header__item" to="/video43">
+            Video43
+          </Link>
+          <Link className="menu-header__item" to="/video44">
+            Video44
+          </Link>
         </div>
 
         {/* <NavLink to="/todos">Todos</NavLink> */}
         {/* <Navigate from="/home" to="/" /> */}
         <Routes>
           {/* <Route path="/" element={<TodoFeature />} /> */}
+          <Route path="/video44" element={<Video44 />} />
+          <Route path="/video43" element={<Video43 />} />
+          <Route path="/video42" element={<Video42 />} />
+          <Route path="/video41" element={<Video41 />} />
+          <Route path="/video40" element={<Video40 />} />
           <Route path="/todos" element={<TodoFeature />} />
           <Route path="/albums" element={<AlbumFeature />} />
           <Route path="/stories" element={<StoryFeature />} />
