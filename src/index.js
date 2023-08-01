@@ -6,7 +6,6 @@ import reportWebVitals from "./reportWebVitals";
 import "./styles/index.scss";
 
 // Fake comments
-
 function Video382(id) {
   setInterval(() => {
     window.dispatchEvent(

@@ -108,6 +108,12 @@ import { Video42 } from "./views/Example/Video42";
 import Video43 from "./views/Example/Video43";
 // eslint-disable-next-line
 import Video44 from "./views/Example/Video44";
+// eslint-disable-next-line
+import Video45 from "./views/Example/Video45";
+// eslint-disable-next-line
+import Video451 from "./views/Example/Video451";
+// eslint-disable-next-line
+import Video46 from "./views/Example/Video46";
 /**
  * 2 components : class component / function component ( function, arrow)
  */
@@ -163,12 +169,44 @@ function App() {
           <Link className="menu-header__item" to="/video44">
             Video44
           </Link>
+          <Link className="menu-header__item" to="/video45">
+            Video45
+          </Link>
+          <Link className="menu-header__item" to="/video451">
+            Video451
+          </Link>
+          <Link className="menu-header__item" to="/video46">
+            Video46
+          </Link>
         </div>
 
+        <div className="row">
+          <div
+            className="col"
+            style={{ padding: 100, backgroundColor: "red", marginRight: 100 }}
+          >
+            1 of 3
+          </div>
+          <div
+            className="col"
+            style={{ padding: 100, backgroundColor: "red", marginRight: 100 }}
+          >
+            2 of 3
+          </div>
+          <div
+            className="col"
+            style={{ padding: 100, backgroundColor: "red", marginRight: 100 }}
+          >
+            3 of 3
+          </div>
+        </div>
         {/* <NavLink to="/todos">Todos</NavLink> */}
         {/* <Navigate from="/home" to="/" /> */}
         <Routes>
           {/* <Route path="/" element={<TodoFeature />} /> */}
+          <Route path="/video46" element={<Video46 />} />
+          <Route path="/video451" element={<Video451 />} />
+          <Route path="/video45" element={<Video45 />} />
           <Route path="/video44" element={<Video44 />} />
           <Route path="/video43" element={<Video43 />} />
           <Route path="/video42" element={<Video42 />} />

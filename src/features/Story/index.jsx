@@ -43,13 +43,6 @@ function StoryFeature(props) {
         "https://st.nettruyenmax.com/data/comics/108/3-kiep-xui-xeo-kiep-nay-cung-ta-than-kin-3382.jpg",
       author: "Ohmori Aoi",
     },
-    {
-      id: 6,
-      name: "Siêu phàm sát thần",
-      thumbnailUrl:
-        "https://st.nettruyenmax.com/data/comics/124/sieu-pham-sat-than.jpg",
-      author: "Gondaira Hutyji",
-    },
   ];
   return (
     <div className="story-feature__contain">

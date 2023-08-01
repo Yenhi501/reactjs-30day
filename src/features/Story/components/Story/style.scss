@@ -1,10 +1,9 @@
 .story-contain {
 
-    margin: 0 8px;
+    margin: 0 10px;
     position: relative;
 
     &__img {
-        border-radius: 1px;
         width: 200px;
         height: 250px;
         object-fit: cover;
@@ -26,6 +25,7 @@
             font-size: 18px;
             font-weight: 700;
             margin-top: 50px;
+
         }
 
         &__name:hover {
