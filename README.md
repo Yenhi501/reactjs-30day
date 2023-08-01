@@ -73,3 +73,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ### Cach to chuc module
 <img width="517" alt="image" src="https://github.com/Yenhi501/reactjs-30day/assets/91811893/37cc6dec-eb05-4d9e-a555-c02c25c9b524">
+
+
+### Bootstrap
+import bootstrap from 'bootstrap'
+

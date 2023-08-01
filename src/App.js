@@ -1,6 +1,6 @@
+import React, { useEffect } from "react";
 import "./App.scss";
 import logo from "./logo.svg";
-import React, { useEffect } from "react";
 // eslint-disable-next-line
 import MyComponent from "./views/Example/myComponent";
 // eslint-disable-next-line
@@ -93,11 +93,11 @@ import { OnTap15 } from "./views/Example/OnTap15";
 // eslint-disable-next-line
 import { Video38 } from "./views/Example/Video38";
 // eslint-disable-next-line
-import { Route, Routes, Link, NavLink, Navigate } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
+import productsApi from "./api/productApi";
 import AlbumFeature from "./features/Album";
 import StoryFeature from "./features/Story";
 import TodoFeature from "./features/Todo";
-import productsApi from "./api/productApi";
 // eslint-disable-next-line
 import { Video40 } from "./views/Example/Video40";
 // eslint-disable-next-line
@@ -183,19 +183,19 @@ function App() {
         <div className="row">
           <div
             className="col"
-            style={{ padding: 100, backgroundColor: "red", marginRight: 100 }}
+            style={{ padding: 100, backgroundColor: "#ccc", marginRight: 100 }}
           >
             1 of 3
           </div>
           <div
             className="col"
-            style={{ padding: 100, backgroundColor: "red", marginRight: 100 }}
+            style={{ padding: 100, backgroundColor: "#ccc", marginRight: 100 }}
           >
             2 of 3
           </div>
           <div
             className="col"
-            style={{ padding: 100, backgroundColor: "red", marginRight: 100 }}
+            style={{ padding: 100, backgroundColor: "#ccc", marginRight: 100 }}
           >
             3 of 3
           </div>
